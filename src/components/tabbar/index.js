@@ -21,7 +21,9 @@ const tabbarArr = [
         link: '/user'
     }
 ];
-/*普通组件转高阶组件*/
+/*普通组件转高阶组件 转为高阶组件后分页组件页面无需再引用该组件只需要在导出时加上该方法
+* 详情参考pages页面
+* */
 const Tabbar = (WrappedComponent) =>
 
     class Tabbar extends Component {
@@ -51,9 +53,14 @@ const Tabbar = (WrappedComponent) =>
                     <div className='tabbar'>
                         <div className='tabbar-content'>
                             {
+                                /*循环获去每一个tabbar的路径v.link代表每个的路径 text显示每一个tabbar名
+                                indexOf如果要检索的字符串值没有出现，则该方法返回 -1。
+                                判断是否大于-1  为真添加active
+                                iconfont加上动态数据须在里面后面加上空格
+                          */
                                 tabbarArr.map((v, i) => (
                                     <Link to={v.link} key={i}
-                                          className={'tarbar-item ' + (url.indexOf(v.link) > -1 ? 'active' : '')}
+                                          className={'tabbar-item ' + (url.indexOf(v.link) > -1 ? 'active' : '')}
                                     >
                                         <div className={'iconfont ' + v.img}></div>
                                         <div>{v.text}</div>

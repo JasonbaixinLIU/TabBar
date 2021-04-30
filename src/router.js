@@ -6,6 +6,7 @@ import Catgory from './pages/catgory'
 import Car from './pages/car'
 import User from './pages/user'
 
+/*路由标准写法BrowserRouter中包含Switch中包含Route  path后面接路径  并输出分页路由例如Home*/
 export default ()=>(
     <BrowserRouter>
         <Switch>

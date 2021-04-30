@@ -17,9 +17,6 @@
     display: flex;
     justify-content: space-around;
 }
-.tarbar-item{
-
-}
 .active{
    color: red !important;
 }

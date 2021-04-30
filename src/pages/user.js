@@ -11,7 +11,7 @@ class User extends Component {
         );
     }
 }
-
+/*将tabbar直接包裹导出内容即可*/
 export default Tabbar(User);
 /*
 export default User;*/

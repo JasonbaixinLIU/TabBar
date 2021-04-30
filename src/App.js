@@ -1,12 +1,11 @@
-import logo from './logo.svg';
 import React,{Component} from 'react';
 import './App.css';
-import Tabbar from './components/tabbar';
+/*添加路由*/
 import RouterMap from './router'
 import './static/iconfont.css';
 
 
-
+/*添加路由react-router-dom*/
 class App extends Component{
     render(){
         return(
